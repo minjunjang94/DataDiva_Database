@@ -7,7 +7,8 @@ CREATE TABLE "Amt"."TP_Amount"
   ,"AutoPaymentSeq" INT	 NULL
   ,"AutoChaAmt" INT	 NULL
   ,"Remark" VARCHAR(100) NULL
-  ,CONSTRAINT TB_User_PK PRIMARY KEY ("UserSeq")
+  ,CONSTRAINT TP_Amount_PK PRIMARY KEY ("UserSeq")
+  ,CONSTRAINT TP_Amount_FK FOREIGN KEY ("UserSeq") REFERENCES "Base"."TB_User"("UserSeq") ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 COMMENT ON COLUMN "Amt"."TP_Amount"."UserSeq" IS '사용자 내부코드';
