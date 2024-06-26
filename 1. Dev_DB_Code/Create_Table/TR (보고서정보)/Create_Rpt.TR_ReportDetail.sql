@@ -6,6 +6,7 @@ CREATE TABLE "Rpt"."TR_ReportDetail"
   ,"Remark" VARCHAR(100) NULL
   ,CONSTRAINT TR_ReportDetail_PK PRIMARY KEY ("UserSeq", "ReportSeq")
   ,CONSTRAINT TR_ReportDetail_FK FOREIGN KEY ("UserSeq") REFERENCES "Base"."TB_User"("UserSeq") ON DELETE CASCADE ON UPDATE CASCADE
+  ,CONSTRAINT TR_ReportDetail_FK2 FOREIGN KEY ("UserSeq", "ReportSeq") REFERENCES "Rpt"."TR_Report"("UserSeq", "ReportSeq") ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 COMMENT ON COLUMN "Rpt"."TR_ReportDetail"."UserSeq" IS '사용자 내부코드';
