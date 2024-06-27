@@ -10,7 +10,6 @@ CREATE OR REPLACE FUNCTION "Base_SQL"."Func_Update_TR_Report"(
 	,"InData_Keyword5" VARCHAR(50) -- 키워드5
 	,"InData_IsOpen" CHAR(1) -- 공개 여부
 	,"InData_PDF" 	VARCHAR(300) -- PDF 파일 경로
-	,"InData_MainComment" VARCHAR(300)  -- 댓글 대표 글
 	,"InData_Report" TEXT -- 보고서 내용
 	,"InData_Summary" TEXT -- AI 요약 내용
 )
@@ -27,8 +26,8 @@ DECLARE
 BEGIN
 /*    
 -- ************************************************************************************ --
-Create Name	: my news 기사 정보 Update
-Create Date		: 2024-04-16
+Create Name	: 내 보고서 내용 정보Update
+Create Date	: 2024-06-26
 Create Emp		: JayJun
 Update Emp 	:
 -- ************************************************************************************ --
@@ -61,11 +60,10 @@ Update Emp 	:
 				  "Keyword4" = %L,
 				  "Keyword5" = %L,
 				  "IsOpen" = %L,
-				  "PDF" = %L,
-				  "MainComment" = %L
+				  "PDF" = %L
 		 WHERE "UserSeq" = %L
 		      AND "ReportSeq" = %L;
-	$f$, "InData_Title", "InData_SubjectType", "InData_Keyword1", "InData_Keyword2", "InData_Keyword3", "InData_Keyword4", "InData_Keyword5", "InData_IsOpen", "InData_PDF", "InData_MainComment", "InData_UserSeq", "InData_ReportSeq");
+	$f$, "InData_Title", "InData_SubjectType", "InData_Keyword1", "InData_Keyword2", "InData_Keyword3", "InData_Keyword4", "InData_Keyword5", "InData_IsOpen", "InData_PDF", "InData_UserSeq", "InData_ReportSeq");
 
     -- 보고서 내용 정보  Update	
 	EXECUTE format($f$	

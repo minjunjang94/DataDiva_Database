@@ -5,7 +5,7 @@ CREATE TABLE "Rpt"."TR_ReportRef"
   ,"RefSeq" INT	 NOT NULL
   ,"RefTitle" VARCHAR(200) NOT NULL
   ,"StartCheckTime" TIMESTAMP NOT NULL
-  ,"EndCheckTime" TIMESTAMP NOT NULL
+  ,"EndCheckTime" TIMESTAMP NULL
   ,"RefStatus" INT	 NOT NULL
   ,"Remark" VARCHAR(100) NULL
   ,CONSTRAINT TR_ReportRef_PK PRIMARY KEY ("UserSeq", "ReportSeq", "RefSeq")

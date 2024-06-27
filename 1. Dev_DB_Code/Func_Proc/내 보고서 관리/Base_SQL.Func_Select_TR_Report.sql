@@ -3,6 +3,7 @@ CREATE OR REPLACE FUNCTION "Base_SQL"."Func_Select_TR_Report"(
 )
 RETURNS TABLE (
     "UserSeq" VARCHAR(50),
+	"ReportSeq" INT,
     "Title" VARCHAR(200),
     "SubjectTypeCode" INT,
     "SubjectType" VARCHAR(30),
@@ -25,6 +26,7 @@ Update Emp   :
     RETURN QUERY 
     SELECT
         A."UserSeq",
+		A."ReportSeq",
         A."Title",
         A."SubjectType" AS "SubjectTypeCode",
         B."Remark" AS "SubjectType",
