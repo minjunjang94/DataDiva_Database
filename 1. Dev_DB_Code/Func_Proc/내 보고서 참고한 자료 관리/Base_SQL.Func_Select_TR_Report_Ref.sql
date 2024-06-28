@@ -35,7 +35,7 @@ Update Emp   :
     LEFT JOIN "Base"."TB_Minor" AS B ON A."RefStatus" = B."MinorSeq"
     WHERE A."UserSeq" = "InData_UserSeq"
 	     AND A."ReportSeq" = "InData_ReportSeq"
-	ORDER BY A."StartCheckTime" DESC;
+	ORDER BY A."StartCheckTime" ASC;
 
 END;
 $$;

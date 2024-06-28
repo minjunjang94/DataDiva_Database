@@ -1,6 +1,6 @@
-CREATE OR REPLACE FUNCTION "Base_SQL"."Func_Delete_TR_Report"(
+CREATE OR REPLACE FUNCTION "Base_SQL"."Func_Delete_TP_Payment"(
     "InData_UserSeq" VARCHAR(50) -- 사용자 내부코드
-   ,"InData_ReportSeq" INT -- 보고서 내부코드
+   ,"InData_PaymentSeq" INT -- 결제 내부코드
 )
 RETURNS TABLE (
     "ErrorCheck" INT,
@@ -13,7 +13,7 @@ DECLARE
 BEGIN
 /*    
 -- ************************************************************************************ --
-Create Name	: 내 보고서 정보 Delete
+Create Name	: 결제 정보 Delete
 Create Date	: 2024-06-26
 Create Emp		: JayJun
 Update Emp 	:
@@ -22,9 +22,9 @@ Update Emp 	:
 
     EXECUTE format($f$
         SELECT CASE WHEN EXISTS (
-        		SELECT 1 FROM "Rpt"."TR_Report" WHERE "UserSeq" = %L AND "ReportSeq" = %L
+        		SELECT 1 FROM "Amt"."TP_Payment" WHERE "UserSeq" = %L AND "PaymentSeq" = %L
             ) THEN 1 ELSE 0 END;
-    $f$, "InData_UserSeq", "InData_ReportSeq")
+    $f$, "InData_UserSeq", "InData_PaymentSeq")
     INTO "Var_Check";
 
 
@@ -39,12 +39,12 @@ Update Emp 	:
 
     -- 데이터 삭제
     EXECUTE format($f$
-		DELETE FROM "Rpt"."TR_Report" WHERE "UserSeq" = %L AND "ReportSeq" = %L;
-    $f$, "InData_UserSeq", "InData_ReportSeq");
+		DELETE FROM "Amt"."TP_Payment" WHERE "UserSeq" = %L AND "PaymentSeq" = %L;
+    $f$, "InData_UserSeq", "InData_PaymentSeq");
 
     -- 성공 메시지 반환
-    RETURN QUERY SELECT 1111, '내 보고서 정보 삭제 완료'::VARCHAR(200);
+    RETURN QUERY SELECT 1111, '결제 정보 삭제 완료'::VARCHAR(200);
 END;
 $$;
 
-select * from  "Base_SQL"."Func_Delete_TR_Report" ('test_UserSeq0912843024', '1');
+select * from  "Base_SQL"."Func_Delete_TP_Payment" ('test_UserSeq0912843024', '1');

@@ -38,7 +38,7 @@ Update Emp   :
     FROM "Rpt"."TR_Report" AS A
     LEFT JOIN "Base"."TB_Minor" AS B ON A."SubjectType" = B."MinorSeq"
     WHERE A."UserSeq" = "InData_UserSeq"
-	ORDER BY A."CreateDateTime" DESC;
+	ORDER BY A."CreateDateTime" ASC;
 
 END;
 $$;

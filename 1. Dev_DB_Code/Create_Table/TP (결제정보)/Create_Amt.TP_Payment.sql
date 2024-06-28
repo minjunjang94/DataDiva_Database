@@ -4,7 +4,7 @@ CREATE TABLE "Amt"."TP_Payment"
   ,"PaymentSeq" INT	 NOT NULL
   ,"IsMainPayment" CHAR(1) NOT NULL
   ,"PaymentNetwork" VARCHAR(30) NOT NULL
-  ,"CardNumber" CHAR(8) NOT NULL
+  ,"CardNumber" VARCHAR(20) NOT NULL
   ,"VP_Year" CHAR(2) NOT NULL
   ,"VP_Month" CHAR(2) NOT NULL
   ,"CVC" INT	 NOT NULL

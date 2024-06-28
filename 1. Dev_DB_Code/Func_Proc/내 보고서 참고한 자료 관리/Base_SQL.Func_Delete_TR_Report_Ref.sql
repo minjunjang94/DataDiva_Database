@@ -22,7 +22,7 @@ Update Emp 	:
 -- ************************************************************************************ --
 */
 
-    -- {기관약명}.TA_Emp 및 Base.TB_User 데이터 삭제
+    -- 데이터 삭제
     EXECUTE format($f$
 		DELETE FROM "Rpt"."TR_ReportRef" WHERE "UserSeq" = %L AND "ReportSeq" = %L AND "RefSeq" = %L;
     $f$, "InData_UserSeq", "InData_ReportSeq", "InData_RefSeq");
