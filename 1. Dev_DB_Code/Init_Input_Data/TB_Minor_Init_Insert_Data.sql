@@ -35,7 +35,11 @@ INSERT INTO "Base"."TB_Minor" ("MinorSeq","MajorSeq","MinorName","Remark") VALUE
 INSERT INTO "Base"."TB_Minor" ("MinorSeq","MajorSeq","MinorName","Remark") VALUES (2001007,2001,'Natural_Science', '자연과학');
 INSERT INTO "Base"."TB_Minor" ("MinorSeq","MajorSeq","MinorName","Remark") VALUES (2001008,2001,'Social_Science', '사회과학');
 																																											            
-INSERT INTO "Base"."TB_Minor" ("MinorSeq","MajorSeq","MinorName","Remark") VALUES (2002001,2002,'Under review', '심사 중');
-INSERT INTO "Base"."TB_Minor" ("MinorSeq","MajorSeq","MinorName","Remark") VALUES (2002002,2002,'Approval', '등록 완료');
-INSERT INTO "Base"."TB_Minor" ("MinorSeq","MajorSeq","MinorName","Remark") VALUES (2002003,2002,'Refuse', '등록 거절');
+INSERT INTO "Base"."TB_Minor" ("MinorSeq","MajorSeq","MinorName","Remark") VALUES (2002001,2002,'Progressing', '심사 중');
+INSERT INTO "Base"."TB_Minor" ("MinorSeq","MajorSeq","MinorName","Remark") VALUES (2002002,2002,'Completed', '등록 완료');
+INSERT INTO "Base"."TB_Minor" ("MinorSeq","MajorSeq","MinorName","Remark") VALUES (2002003,2002,'Refused', '등록 거절');
+
+INSERT INTO "Base"."TB_Minor" ("MinorSeq","MajorSeq","MinorName","Remark") VALUES (2003001,2003,'Progressing', '환불 진행중');
+INSERT INTO "Base"."TB_Minor" ("MinorSeq","MajorSeq","MinorName","Remark") VALUES (2003002,2003,'Completed', '환불 완료');
+INSERT INTO "Base"."TB_Minor" ("MinorSeq","MajorSeq","MinorName","Remark") VALUES (2003003,2003,'Refused', '환불 거절');
 

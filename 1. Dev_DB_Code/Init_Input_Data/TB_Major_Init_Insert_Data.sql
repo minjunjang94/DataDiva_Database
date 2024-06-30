@@ -17,3 +17,4 @@ INSERT INTO "Base"."TB_Major" ("MajorSeq","MajorName","Remark") VALUES (1004,'Sy
 -- @@@@@ "Base"."TB_Major"."MajorSeq" 2000 @@@@@ --
 INSERT INTO "Base"."TB_Major" ("MajorSeq","MajorName","Remark") VALUES (2001, 'SubjectType', '주제 분류');
 INSERT INTO "Base"."TB_Major" ("MajorSeq","MajorName","Remark") VALUES (2002, 'RefStatus', '등록심사 현황');
+INSERT INTO "Base"."TB_Major" ("MajorSeq","MajorName","Remark") VALUES (2003, 'RefundStatus', '환불 현황');
